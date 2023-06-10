@@ -1,13 +1,13 @@
 CreateThread(function()
-    GlobalState.mba = Config.Default
+    GlobalState.tequilala = Config.Default
 end)
 
-RegisterCommand('setmba', function(source, args)
-    if IsPlayerAceAllowed(source, 'mba') then
-        local mba = args[1]
+RegisterCommand('settequilala', function(source, args)
+    if IsPlayerAceAllowed(source, 'tequilala') then
+        local tequilala = args[1]
 
-        if not mba or not Config.Sets[mba] then return end
+        if not tequilala or not Config.Sets[tequilala] then return end
 
-        GlobalState.mba = mba
+        GlobalState.tequilala = tequilala
     end
 end, false)
