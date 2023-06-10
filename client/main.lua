@@ -1,7 +1,7 @@
 local hasSpawned = false
 
-local function setMBA(entitySet)
-    local interior = GetInteriorAtCoords(-324.22, -1968.49, 20.60)
+local function setTEQLALA(entitySet)
+    local interior = GetInteriorAtCoords(-558.00490000, 285.66400000, 81.17640000)
 
     if interior ~= 0 then
         local removeSets, newEntitySet = Config.Removals.interiors, Config.Sets[entitySet]
@@ -30,17 +30,17 @@ local function setMBA(entitySet)
 end
 
 CreateThread(function()
-    TriggerEvent('chat:addSuggestion', '/setmba', 'Set the maze bank arena interior.', {{ name = 'interior', help = 'The interior entity set name' }})
+    TriggerEvent('chat:addSuggestion', '/setteq', 'Set the maze bank arena interior.', {{ name = 'interior', help = 'The interior entity set name' }})
 end)
 
 AddEventHandler('playerSpawned', function()
     if not hasSpawned then
-        setMBA(GlobalState.mba)
+        setTEQLALA(GlobalState.tequilala)
 
         hasSpawned = true
     end
 end)
 
-AddStateBagChangeHandler('mba', nil, function(bagName, key, value, _unused, replicated)
-    setMBA(value)
+AddStateBagChangeHandler('tequilala', nil, function(bagName, key, value, _unused, replicated)
+    setTEQLALA(value)
 end)
