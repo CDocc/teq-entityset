@@ -10,7 +10,7 @@
 
 **Add the following to your server.cfg**
 
-add_ace group.tequilala mba allow
+add_ace group.tequilala tequilala allow
 
 **If not using a discord ace perms resource add the following also, replace 'identifier' with your chosen identifier. For example, mine is discord:530698981920079882**
 
